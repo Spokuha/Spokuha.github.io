@@ -1,0 +1,979 @@
+.container {
+	margin: 0 auto;
+	width:992px;
+
+	/*Необходим для фиксации ширины контента*/
+
+	/*Второе тоже: мы делаем класс .container с шириной 992 - 16 пикселей. Что? Откуда эти значения?
+
+992 пикселя это константа — в последнее время дизайнеры верстают десктопные макеты именно с такой шириной,
+
+16 пикселей это паддинги слева и справа у колонок.
+
+992-16=976 пикселей должна быть ширина нашего контейнера.
+
+*/
+}
+
+
+:root {
+	--main-bg-color: rgba(240,240,240,1);
+}
+
+html {
+	box-sizing: border-box;
+	background: var(--main-bg-color);
+}
+
+body {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+}
+
+
+h1,h2 {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header, nav {
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+	a {
+		color:#626262;
+	}
+
+	a:hover {
+		color: #327430; /* Цвет посещенных ссылок */
+		cursor: pointer;
+	}
+
+	.footer-row-center {
+	display: flex;
+	flex-flow:wrap;
+	justify-content: center;
+	border-bottom: 1px solid lightgray;
+	border-top: 1px solid lightgray;
+}
+
+.food-menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+.main-container {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	padding-right: 438px;
+
+	border-bottom: 1px solid rgba(117, 117, 117, 0.2);
+
+	margin-bottom: 56px;
+}
+.main-container p{
+	margin-top: 32px;
+	margin-bottom: 28px;
+
+}
+.main-header-image {
+	display: flex;
+	align-items: center;
+	background-image: url("../img/ubereats/stores/main-img.png");
+	height: 364px;
+}
+
+
+
+
+.header-map-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col-1, .col-2,.col-3, .col-4, .col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-11,.col-12 {
+	box-sizing: border-box;
+}
+
+
+.col-1{flex-basis:8.3333%;}
+.col-2{flex-basis:16.6667%;}
+.col-3{flex-basis:24.9999%;}
+.col-4{flex-basis:33.33333%;}
+.col-5{flex-basis:41.6665%;}
+.col-6{flex-basis:49.9998%;}
+.col-7{flex-basis:58.3331%;}
+.col-8{flex-basis:66.6664%;}
+.col-9{flex-basis:74.9997%;}
+.col-10{flex-basis:83.3333%;}
+.col-11{flex-basis:91.6663%;}
+.col-12{flex-basis:100%;}
+
+
+
+
+
+.item {
+	order: <integer>;
+}
+
+.container-header {
+    display: flex;
+	background-color: white;
+	border-radius: 2px;
+	justify-content: space-between;
+}
+
+
+.food-type {
+	font-size: 22px;
+	line-height: 34px;
+
+	color: #1D1D1D;
+}
+
+.header-right {
+	display: flex;
+	align-items: center;
+}
+
+.header-button {
+	display: flex;
+	justify-content: flex-end;
+
+	text-align: center;
+	position: relative;
+	right:4px;
+	box-sizing: border-box;
+
+}
+
+.register-button {
+	background-color: #262626;
+	color:#FFFFFF;
+	border: 2px;
+	border-radius: 2px;
+
+
+}
+.signin-button {
+	background-color: white;
+	color:black;
+	border: 1px solid #E0E0E0;
+	border-radius: 2px;
+	margin-right: 12px;
+}
+
+
+
+
+
+.txt-button {
+
+	line-height: normal;
+
+	margin-top: 24px;
+	margin-bottom: 8px;
+
+	color: #626262;
+}
+
+.when-button {
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	border-radius: 2px;
+
+	background: var(--main-bg-color);
+
+
+
+
+	color: #1D1D1D;
+}
+.to-button {
+	border: 1px solid #E0E0E0;
+	box-sizing: border-box;
+	border-radius: 2px;
+	background: var(--main-bg-color);
+
+
+
+	color: #1D1D1D;
+}
+
+q{
+	quotes: "\00ab" "\00bb";
+}
+
+.restaurants-info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 389px;
+	height: 204px;
+	background: #FFFFFF;
+
+
+}
+
+ .restaurants-name{
+	color: #1D1D1D;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+ .restaurants-type {
+	 color: #626262;
+	 display: flex;
+	 justify-content: space-between;
+ }
+
+ .restaurants-type p:nth-child(2){
+	 width: 97px;
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 height: 32px;
+	 text-align: center;
+	 background: #262626;
+	 color: #FFFFFF;
+	 margin-left: 100px;
+	 border-radius: 16px;
+	 bottom: 8px;
+ }
+
+	.restaurants-type p:nth-child(1){
+		font-size: 14px;
+	}
+
+.main-img {
+	box-sizing: border-box;
+	flex-basis: 50%;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	border: 1px solid rgba(117, 117, 117, 0.2);
+	box-sizing: border-box;
+	border-radius: 2px;
+}
+
+.main-img-descr{
+	color: #1D1D1D;
+	padding: 0;
+	margin: 0;
+}
+
+.footer {
+	background: #262626;
+	padding-top:50px;
+	margin-top: 63px;
+}
+
+
+.footer-logo {
+	border-bottom: 1px solid lightgray;
+	padding-bottom: 40px;
+}
+
+.footer-select {
+	margin-top: 30px;
+
+	color: #FFFFFF;
+
+	border: 2px;
+	border-radius: 2px;
+	background: #3B3B3B url("../img/ubereats/stores/world.svg") no-repeat;
+	background-position: center	left;
+	padding-left: 30px;
+}
+
+footer p {
+	line-height: normal;
+
+	color: #FFFFFF;
+}
+
+.hash-tag {
+	font-size: 16px;
+}
+
+.footer-info {
+	margin:30px 0;
+	font-size: 13px;
+}
+
+.footer-back {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.footer-button {
+	background: #59BD5A;
+	border:1px solid #59BD5A;
+	border-radius: 2px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 64px;
+	height: 64px;
+
+	position: relative;
+	right: 6px;
+
+	align-self: center;
+}
+
+.footer-company {
+	font-size: 11px;
+	display: flex;
+	justify-content: space-between;
+	height: 131px;
+}
+
+	@media (min-width: 768px) {
+		body {
+			display:block;
+		}
+		h1 {
+			font-size:26px;
+		}
+		.container {
+			width: 320px;
+			margin: 0 auto;
+		}
+		.container-header {
+			display: flex;
+			align-items: center;
+			height: 72px;
+		}
+
+		.padding-left {
+			padding-left: 8px;
+		}
+
+		.register-button {
+			width:72px;
+			height: 40px;
+			font-weight: 500;
+			font-size: 11px;
+		}
+		.signin-button {
+			width:72px;
+			height: 40px;
+			font-weight: 500;
+			font-size: 11px;
+		}
+
+
+		.txt-button {
+			width: 28px;
+			height: 13px;
+			font-size: 11px;
+
+		}
+		.when-button {
+			width: 65px;
+			height: 40px;
+
+			font-size: 13px;
+			line-height: 24px;
+		}
+		.to-button {
+			width: 227px;
+			height: 40px;
+
+			font-size: 13px;
+			line-height: 24px;
+		}
+
+		.restaurants-name {
+			font-size: 24px;
+			line-height: normal;
+		}
+		.food-menu img{
+			width:311.04px;
+			height:250px;
+		}
+		select {
+			width: 173px;
+			height: 40px;
+		}
+        .header-map-button {
+            display: none;
+			box-sizing: border-box;
+        }
+		.header-basket {
+			display: none;
+		}
+		.footer-row-center {
+			padding: 10px 0;
+		}
+
+
+		.main-img img{
+			width:102px;
+			height: 102px;
+		}
+
+		.main-header-image {
+			width: 320px;
+			height: 255.89px;
+			background-image: url("../img/ubereats/Restaurant /photo3.png");
+		}
+
+		.restaurants-info {
+			width: 308px;
+			height: 180px;
+			margin-left: 8px;
+			margin-top: 131px;
+
+			justify-content: flex-start;
+		}
+
+		.restaurants-name p{
+			margin-bottom: 0px;
+			margin-top: 0px;
+		}
+
+		.restaurants-type p:nth-child(1){
+			margin-bottom: 0px;
+			margin-top: 40px;
+		}
+
+		.restaurants-type p:nth-child(2){
+			font-size: 13px;
+			line-height: normal;
+			margin-left: 0px;
+		}
+
+		.restaurants-type {
+			flex-direction: column;
+			align-items: center;
+		}
+		
+		.main-container{
+			display: none;
+		}
+
+		.main-food-type {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.food-type {
+			padding-top: 56px;
+			padding-left: 0px;
+			margin-bottom: 12px;
+			font-size: 22px;
+			line-height: 34px;
+			text-align: center;
+		}
+
+		.food-type-border {
+			border-top: 1px solid #757575;
+			width: 50px;
+			height: 1px;
+			margin-bottom: 43px;
+		}
+
+		.main-img {
+			height: 102px;
+			flex-basis: 100%;
+			margin-bottom: 16px;
+			border:none;
+			border-bottom: 1px solid #757575;
+		}
+
+		.food-menu {
+			margin-left: 8px;
+			margin-right: 4px;
+
+		}
+
+		.main-img-descr {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+
+		.main-img-descr div p:nth-child(1){
+			font-size: 14px;
+			line-height: 24px;
+			margin-bottom: 0px;
+
+			color: #1D1D1D;
+		}
+
+		.main-img-descr div p:nth-child(2){
+			font-weight: normal;
+			font-size: 13px;
+			line-height: 21px;
+
+			margin: 0px 0px;
+
+			color: #626262;
+
+		}
+
+
+		.main-img-descr :nth-child(2) {
+			font-weight: 500;
+			font-size: 15px;
+			line-height: 21px;
+			margin: 0px;
+			margin-bottom: 15px;
+
+			box-sizing: border-box;
+			flex-basis: 100%;
+			align-self: flex-end;
+
+			color: #1D1D1D;
+		}
+
+
+
+
+
+
+		}
+
+
+
+	@media (min-width: 992px) {
+
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+        }
+
+		.header-button {
+			right: 0px;
+		}
+
+		.header-basket {
+			display: block;
+			margin-right: 18px;
+			margin-left: 27px;
+		}
+
+		.header-right {
+			box-sizing: border-box;
+			flex-basis: 33.3333%;
+		}
+
+        .main-button {
+            display: none;
+        }
+
+		.main-container {
+			display: initial;
+			background: #FFFFFF;
+			padding-right: 155px;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
+
+
+			border-bottom: 1px solid rgba(117, 117, 117, 0.2);
+
+			margin-bottom: 56px;
+		}
+
+
+		.header-map-button{
+			display: flex;
+			flex-basis: 25.3333%;
+			justify-content: space-between;
+			position: relative;
+			right:88px;
+
+		}
+
+		.padding-left {
+			padding-left: 8px;
+		}
+
+		.signin-button {
+			margin-right: 16px;
+			width: 80px;
+		}
+
+		.register-button {
+			width: 80px;
+		}
+
+		.txt-button {
+			margin: 0px;
+			text-align: center;
+			width: 20px;
+
+		}
+
+		.header-logo {
+			box-sizing: border-box;
+			flex-basis: 33.3333%;
+		}
+
+		.when-button {
+			border: 1px solid #E0E0E0;
+			width: 57px;
+			height: 40px;
+			background: #FFFFFF;
+		}
+		
+		.to-button {
+			width: 215px;
+			height: 40px;
+			background: #FFFFFF;
+		}
+
+		.footer-main:nth-child(2) {
+			padding-right:203px;
+		}
+
+		.footer-select {
+			font-size: 13px;
+		}
+
+		.footer-footer {
+			box-sizing: border-box;
+			flex-basis: 75%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.footer-company {
+			display: flex;
+
+		}
+
+		.footer-row-center {
+			padding: 40px 0;
+		}
+
+		.food-menu {
+			margin:0 8px;
+		}
+
+		.food-menu img {
+			width: 376px;
+		}
+
+		.container {
+			width: 768px;
+		}
+
+		.main-header-image{
+			width: 768px;
+			height: 364px;
+			background-image: url("../img/ubereats/Restaurant /d42ea9bbf7aff297c2e1eb5e5f3b7fa6-w1080-87.png");
+		}
+
+		.main-img {
+		box-sizing: border-box;
+		flex-basis: 100%;
+		margin-bottom: 32px;
+		border: 1px solid #757575;
+		height: 160px;
+		}
+
+		.food-menu .main-img:last-child{
+			margin-bottom: 48px;
+		}
+
+		.restaurants-info {
+			width: 432px;
+			height: 204px;
+
+			margin-top: 0px;
+		}
+
+		.restaurants-name {
+			font-size: 36px;
+			line-height: normal;
+			margin-top: 38px;
+			margin-bottom: 54px;
+		}
+
+		.restaurants-type {
+			width: 432px;
+			flex-direction: row;
+			align-items: center;
+			align-content: center;
+		}
+
+		.restaurants-type p:nth-child(1){
+			font-size: 13px;
+			line-height: normal;
+			margin-top: 0px;
+			margin-left: 48px;
+		}
+
+		.restaurants-type p:nth-child(2){
+			font-size: 13px;
+			line-height: normal;
+			margin: 0px;
+			margin-right: 48px;
+
+		}
+
+		.food-type-border {
+			display: none;
+		}
+
+		.food-type {
+			padding-top: 0px;
+			align-self: flex-start;
+		}
+
+		.main-img:hover {
+			background: lightgray;
+			mix-blend-mode: normal;
+		}
+
+		.main-img img{
+			width:200px;
+			height: 158px;
+		}
+
+		.main-img-descr {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin-left: 24px;
+		}
+
+		.main-img-descr div p:nth-child(1){
+			font-size: 16px;
+			line-height: 24px;
+
+			color: #1D1D1D;
+
+			margin-top: 16px;
+			margin-bottom: 0px;
+		}
+
+		.main-img-descr div p:nth-child(2){
+			font-size: 13px;
+			line-height: 21px;
+
+			color: #626262;
+
+			margin-top: 4px;
+			margin-bottom: 0px;
+		}
+
+
+		.main-img-descr :nth-child(2) {
+			font-size: 15px;
+			line-height: 21px;
+			font-weight: 500;
+
+			color: #1D1D1D;
+
+			box-sizing: border-box;
+			flex-basis: 100%;
+
+
+
+			align-self: flex-end;
+
+			margin: 0px;
+			margin-bottom: 16px;
+		}
+
+		.footer {
+			padding-left: 8px;
+			padding-right: 8px;
+			margin-top: 0px;
+		}
+
+
+
+
+
+
+
+
+
+	}
+
+	@media (min-width: 1200px) {
+
+		.container {
+			width: 1124px;
+		}
+
+
+		.header-map-button {
+			right:35px;
+		}
+
+		.header-right {
+			justify-content: flex-end;
+		}
+
+		.header-basket {
+			margin-right: 97px;
+		}
+
+		.when-button {
+			width: 65px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.to-button {
+			width: 292px;
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.restaurants-name {
+			font-size: 36px;
+			margin-top: 0px;
+		}
+
+		.restaurants-type {
+			font-size: 13px;
+			width: 389px;
+		}
+
+		.restaurants-type p:nth-child(1){
+			margin-left: 38px;
+		}
+		.restaurants-type p:nth-child(2){
+			margin-right: 32px;
+		}
+
+
+		.restaurants-info {
+			margin-left: 81px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			width: 389px;
+			height: 204px;
+			margin-top: 0px;
+		}
+
+		.main-header-image {
+			width: 1124px;
+			height: 364px;
+			background-image: url("../img/ubereats/Restaurant /main-img.png");
+		}
+
+		.food-menu {
+			margin-left: 81px;
+			margin-right: 87px;
+		}
+
+		body {
+			background: #FFFFFF;
+		}
+
+		.main-img {
+			box-sizing: border-box;
+			flex-basis: 49%;
+			margin-bottom: 49px;
+		}
+		.main-img:hover {
+			background: lightgray;
+			mix-blend-mode: normal;
+		}
+
+		.main-img img{
+			width:170px;
+			height: 158px;
+		}
+
+		.padding-left {
+			padding-left: 81px;
+		}
+
+		.margin-right {
+			margin-right: 87px;
+		}
+
+
+
+		.container {
+			margin: auto;
+			width: 1124px;
+		}
+
+		.main-img-descr {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+			align-items: flex-start;
+			margin-left: 16px;
+
+		}
+
+		.main-img-descr div p:nth-child(1){
+			font-size: 16px;
+			line-height: 24px;
+
+			color: #1D1D1D;
+
+			margin-top: 16px;
+			margin-bottom: 0px;
+		}
+		.main-img-descr div p:nth-child(2){
+			font-size: 13px;
+			line-height: 21px;
+
+			color: #626262;
+
+			margin-top: 4px;
+			margin-bottom: 0px;
+		}
+
+
+		.main-img-descr :nth-child(2) {
+			font-size: 15px;
+			line-height: 21px;
+
+			box-sizing: border-box;
+			flex-basis: 100%;
+
+
+
+			align-self: flex-end;
+
+			margin: 0px;
+			margin-bottom: 16px;
+			color: #1D1D1D;
+
+		}
+
+		.main-cost {
+			font-size: 14px;
+			line-height: 21px;
+		}
+
+		.main-food-name {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		.footer {
+			margin-top: 31px;
+			padding-left: 81px;
+			padding-right: 87px;
+		}
+	}
